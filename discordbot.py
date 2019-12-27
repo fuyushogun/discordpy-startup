@@ -20,7 +20,7 @@ async def ping(ctx):
 @bot.event
 async def on_message(message):
     # 「チンポ」で始まるか調べる
-    if message.content.startswith("おはよう"):
+    if message.content.startswith("チンポ"):
         #botは無視
         if bot.user != message.author:
             #めっせーじ
