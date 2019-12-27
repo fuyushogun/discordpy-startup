@@ -31,5 +31,10 @@ async def on_message(message):
     #おちんぽ？
     if message.content == 'おちんぽ':
         await message.channel.send('ジョイナス!!!')
+        
+@bot.command()
+async def chinpo(ctx):
+    await ctx.send('ちんぽーー')
+        
 
 bot.run(token)
