@@ -30,7 +30,7 @@ async def on_message(message):
         return
     # ちんぽが含まれていたら？？？
     if re.match("おちんぽ", message.content):
-        await message.channel.send("ジョイナス!!!")
+        await message.channel.send("ジョイナス!")
 
     #print("処理の最後に次の式を追加します：")
     await bot.process_commands(message)
@@ -41,6 +41,9 @@ async def on_ready():
     CHANNEL_ID = 660146537242034197
     channel = client.get_channel(CHANNEL_ID)
     await channel.send('おちんちんジョイナス！ファンと共に！')
+
+    #print("処理の最後に次の式を追加します：")
+    await bot.process_commands(message)
 
 
 @bot.command()
