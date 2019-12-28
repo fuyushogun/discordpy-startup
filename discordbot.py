@@ -16,8 +16,8 @@ s = '高木「ちんぽ！ちんぽ！ほら！お前らも出せ！」\n'\
     'おはＤ「キャー！浅尾きゅんのM字開脚おちんぽユニコーンのオマケ付きよぉおおお！！！」\n'\
     '高木「ちんぽ！ちんぽ！ちんぽ！さあみんなでジョイナス！ファンと共に！」'
 
-join_us = open("join_us.csv", "r", encoding="UFT-8")
-f = csv.reader(join_us)
+#join_us = open("join_us.csv", "r", encoding="UFT-8")
+#f = csv.reader(join_us)
 
 l =["高木", "吉見", "浅尾", "荒木", "小田"]
 
@@ -33,12 +33,12 @@ async def ping(ctx):
     await ctx.send(s)
 
 @bot.command()
-async def join( ctx):
+async def join(ctx):
     await ctx.send(choice(l))
 
-@bot.command()
-async def us( ctx):
-    await ctx.send(choice(f))
+#@bot.command()
+#async def us(ctx):
+#    await ctx.send(choice(f))
 
 # test終了につき凍結
 #@bot.command()
