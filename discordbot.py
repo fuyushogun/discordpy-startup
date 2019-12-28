@@ -3,6 +3,7 @@ import os
 import traceback
 import re
 from random import randint, choice
+import csv
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
@@ -15,6 +16,10 @@ s = '高木「ちんぽ！ちんぽ！ほら！お前らも出せ！」\n'\
     'おはＤ「キャー！浅尾きゅんのM字開脚おちんぽユニコーンのオマケ付きよぉおおお！！！」\n'\
     '高木「ちんぽ！ちんぽ！ちんぽ！さあみんなでジョイナス！ファンと共に！」'
 
+#join_us = open("join_us.csv", "r", encoding="UFT-8")
+#f = csv.reader(join_us)
+
+l =["高木", "吉見", "浅尾", "荒木", "小田"]
 
 @bot.event
 async def on_command_error(ctx, error):
@@ -26,6 +31,10 @@ async def on_command_error(ctx, error):
 @bot.command()
 async def ping(ctx):
     await ctx.send(s)
+
+@bot.command()
+async def joinus(ctx):
+    await ctx.send(randam.choice(l))
 
 # test終了につき凍結
 #@bot.command()
