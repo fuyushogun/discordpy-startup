@@ -2,11 +2,10 @@ from discord.ext import commands
 import os
 import traceback
 import re
-import pandas as pd
+from random import randint, choice
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
-data = pd.read_csv("join_us.csv", encoding="utf_8")
 
 @bot.event
 async def on_command_error(ctx, error):
@@ -33,8 +32,10 @@ async def on_message(message):
     if re.search("おちんぽ", message.content):
         await message.channel.send("ジョイナス!")
 
-    if re.match("!ジョイナス", message.content):
-        await message.channel.send(data[1])
+    if re.match("!join", message.content):
+        with open('join?us.csv', encoding='UFT-8') as f:
+            join = f.randlines()
+        await message.channel.send(join)
 
 
     #print("処理の最後に次の式を追加します：")
