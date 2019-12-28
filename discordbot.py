@@ -2,10 +2,11 @@ from discord.ext import commands
 import os
 import traceback
 import re
+import pandas as pd
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
-
+data = pd.read_csv("join_us.csv", encoding="utf_8")
 
 @bot.event
 async def on_command_error(ctx, error):
@@ -31,6 +32,10 @@ async def on_message(message):
     # ちんぽが含まれていたら？？？
     if re.search("おちんぽ", message.content):
         await message.channel.send("ジョイナス!")
+
+    if re.match("!ジョイナス", message.content):
+        await message.channel.send(data[1])
+
 
     #print("処理の最後に次の式を追加します：")
     await bot.process_commands(message)
