@@ -22,7 +22,10 @@ async def ping(ctx):
 async def neko(ctx):
     await ctx.send('にゃーん')
 
-
+@bot.event
+async def on_message(message):
+    print("処理の最後に次の式を追加します：")
+    await bot.process_commands(message)
 
         
 @bot.command()
