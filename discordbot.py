@@ -33,8 +33,8 @@ async def ping(ctx):
     await ctx.send(s)
 
 @bot.command()
-async def joinus(ctx):
-    await ctx.send(randam.choice(l))
+async def join(ctx):
+    await ctx.send(choice(l))
 
 # test終了につき凍結
 #@bot.command()
