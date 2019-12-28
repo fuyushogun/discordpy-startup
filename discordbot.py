@@ -2,11 +2,11 @@ from discord.ext import commands
 import os
 import traceback
 import re
-import pandas as pd
+#import pandas as pd
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
-data = pd.read_csv("join_us.csv", encoding="utf_8")
+#data = pd.read_csv("join_us.csv", encoding="utf_8")
 
 @bot.event
 async def on_command_error(ctx, error):
