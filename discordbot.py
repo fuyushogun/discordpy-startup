@@ -7,6 +7,15 @@ from random import randint, choice
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
+
+s = '高木「ちんぽ！ちんぽ！ほら！お前らも出せ！」/n'\
+    '吉見「監督！俺たちこんなこんなことするくらいなら練習が…！」/n'\
+    '高木「うるさい黙れ素人が！そんなことよりファンサービスだ！浅尾を見習え！」/n'\
+    '浅尾「…ジョッ…ジョイナアアアアアアアススススススススゥ！！！」/n'\
+    'おはＤ「キャー！浅尾きゅんのM字開脚おちんぽユニコーンのオマケ付きよぉおおお！！！」/n'\
+    '高木「ちんぽ！ちんぽ！ちんぽ！さあみんなでジョイナス！ファンと共に！」'
+
+
 @bot.event
 async def on_command_error(ctx, error):
     orig_error = getattr(error, "original", error)
@@ -16,12 +25,12 @@ async def on_command_error(ctx, error):
 
 @bot.command()
 async def ping(ctx):
-    await ctx.send('pong')
+    await ctx.send(s)
 
-
-@bot.command()
-async def neko(ctx):
-    await ctx.send('にゃーん')
+# test終了につき凍結
+#@bot.command()
+#async def neko(ctx):
+#    await ctx.send('にゃーん')
 
 @bot.event
 async def on_message(message):
