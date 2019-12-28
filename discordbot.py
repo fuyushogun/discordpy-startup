@@ -35,7 +35,12 @@ async def on_message(message):
     #print("処理の最後に次の式を追加します：")
     await bot.process_commands(message)
 
-
+#起動時にあいさつ
+@bot.event
+async def on_ready():
+    CHANNEL_ID = 660146537242034197
+    channel = client.get_channel(CHANNEL_ID)
+    await channel.send('おちんちんジョイナス！ファンと共に！')
 
 
 @bot.command()
