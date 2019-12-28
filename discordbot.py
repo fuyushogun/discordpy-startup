@@ -23,7 +23,7 @@ async def neko(ctx):
     await ctx.send('にゃーん')
 
 
-@bot.()
+@bot.event()
 async def on_message(message):
     #botを無視
     if message.author.bot:
