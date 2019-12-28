@@ -27,8 +27,8 @@ async def on_message(message):
     #メッセージ送信者がbotだった場合は無視する
     if message.author.bot:
         return
-    # ちんぽが含まれていたら？？？
-    if message.content == "おちんぽ":
+    # ちんぽが含まれていたら？？？（部分一致）
+    if message.content in "おちんぽ":
         await message.channel.send("ジョイナス!!!")
         
     #print("処理の最後に次の式を追加します：")
