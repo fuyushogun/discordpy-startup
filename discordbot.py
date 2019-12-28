@@ -23,14 +23,7 @@ async def neko(ctx):
     await ctx.send('にゃーん')
 
 
-@bot.event()
-async def on_message(message):
-    #botを無視
-    if message.author.bot:
-        return
-    #おちんぽ？
-    if message.content == 'おちんぽ':
-        await message.channel.send('ジョイナス!!!')
+
         
 @bot.command()
 async def chinpo(ctx):
