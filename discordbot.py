@@ -24,9 +24,19 @@ async def neko(ctx):
 
 @bot.event
 async def on_message(message):
-    print("処理の最後に次の式を追加します：")
+    #メッセージ送信者がbotだった場合は無視する
+    if message.author.bot:
+        return
+    # ちんぽが含まれていたら？？？
+    if message.content == "おちんぽ":
+        await message.channel.send("ジョイナス!!!")
+        
+    #print("処理の最後に次の式を追加します：")
     await bot.process_commands(message)
 
+
+    
+    
         
 @bot.command()
 async def chinpo(ctx):
