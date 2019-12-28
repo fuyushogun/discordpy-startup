@@ -33,8 +33,8 @@ async def on_message(message):
         await message.channel.send("ジョイナス!")
 
     if re.match("!join", message.content):
-        with open('join?us.csv', encoding='UFT-8') as f:
-            join = f.randlines()
+        open('join?us.csv', encoding='UFT-8') as f:
+        join = f.randlines()
         await message.channel.send(join)
 
 
