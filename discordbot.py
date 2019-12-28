@@ -32,24 +32,14 @@ async def on_message(message):
     if re.search("おちんぽ", message.content):
         await message.channel.send("ジョイナス!")
 
-    if re.match("!join", message.content):
-        open('join?us.csv', encoding='UFT-8') as f:
-        join = f.randlines()
-        await message.channel.send(join)
+    if re.search("落合", message.content):
+        await message.channel.send("黙れ素人が！")
 
 
-    #print("処理の最後に次の式を追加します：")
-    await bot.process_commands(message)
-
-#起動時にあいさつ
-@bot.event
-async def on_ready():
-    CHANNEL_ID = 660146537242034197
-    channel = client.get_channel(CHANNEL_ID)
-    await channel.send('おちんちんジョイナス！ファンと共に！')
 
     #print("処理の最後に次の式を追加します：")
     await bot.process_commands(message)
+
 
 
 @bot.command()
