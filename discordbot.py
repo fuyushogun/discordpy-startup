@@ -29,7 +29,7 @@ async def on_message(message):
     if message.author.bot:
         return
     # ちんぽが含まれていたら？？？
-    if re.match("おちんぽ", message.content):
+    if re.search("おちんぽ", message.content):
         await message.channel.send("ジョイナス!")
 
     #print("処理の最後に次の式を追加します：")
