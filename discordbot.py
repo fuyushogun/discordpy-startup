@@ -33,8 +33,8 @@ async def on_message(message):
     if re.search("おちんぽ", message.content):
         await message.channel.send("ジョイナス!")
 
-    if re.match("!ジョイナス", message.content):
-        await message.channel.send(data[1])
+   # if re.match("!ジョイナス", message.content):
+    #    await message.channel.send(data[1])
 
 
     #print("処理の最後に次の式を追加します：")
