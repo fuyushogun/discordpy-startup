@@ -397,7 +397,7 @@ async def on_message(message):
     if re.search("明けまして", message.content):
         await message.channel.send(happy_holiday )
 
-    elif message.content == "!猫":
+    if re.search("猫", message.content):
         photo = random.choice(("https://i1.wp.com/memorynator.com/wp-content/uploads"
                                "/2017/03/catgif-matomegif-91.gif?resize=296%2C311&ssl=1",
                                "https://i1.wp.com/memorynator.com/wp-content/uploads"
