@@ -26,6 +26,16 @@ happy_holiday = '高木「ワシも不倫したいんじゃ！田島！不倫お
                 '坂井「自ら不倫してタダでチームの宣伝をし、他の強豪チームに続く。前任者ではあり得ないことだ(ｶﾞｯﾂﾎﾟ」\n'\
                 '吉見「なんてことだ…なんてことだ…」'\
 
+omikuzi = [
+            "big-chinpo"   if i < 2 else
+            "middle-chinpo"   if 2 <= i < 10 else
+            "mini-chinpo"   if 10 <= i < 20 else
+            "chinpo"     if 20 <= i < 40 else
+            "join"   if 40 <= i < 50 else
+            "join-us"     if 50 <= i < 55 else
+            "bad"   if 55 <= i < 59 else
+            "worst"   for i in range(61)]
+
 
 #with open(join_us.csv, encofing='UTF-8')as f:
 #    reader = f.randlines()
@@ -341,6 +351,10 @@ async def join(ctx):
 @bot.command()
 async def us(ctx):
     await ctx.send(choice(joinus))
+
+@bot.command()
+async def kuzi(ctx):
+    await ctx.send(choice(omikuzi))
 
 #@bot.command()
 #async def us(ctx):
