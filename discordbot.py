@@ -41,14 +41,14 @@ happy_holiday = '高木「あけましてジョイナアアアス(ﾎﾟﾛﾝ�
 #'吉見「なんてことだ…なんてことだ…」',\
 
 omikuzi = [
-            "big-chinpo"   if i < 2 else
-            "middle-chinpo"   if 2 <= i < 10 else
-            "mini-chinpo"   if 10 <= i < 20 else
-            "chinpo"     if 20 <= i < 40 else
-            "join"   if 40 <= i < 50 else
-            "join-us"     if 50 <= i < 55 else
-            "bad"   if 55 <= i < 59 else
-            "worst"   for i in range(61)]
+            "大吉"   if i < 2 else
+            "中吉"   if 2 <= i < 10 else
+            "小吉"   if 10 <= i < 20 else
+            "末吉"     if 20 <= i < 40 else
+            "吉"   if 40 <= i < 50 else
+            "ジョイナス"     if 50 <= i < 55 else
+            "凶"   if 55 <= i < 59 else
+            "大凶"   for i in range(61)]
 
 
 #with open(join_us.csv, encofing='UTF-8')as f:
