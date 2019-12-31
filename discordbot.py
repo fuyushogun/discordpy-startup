@@ -4,6 +4,7 @@ import traceback
 import re
 from random import randint, choice
 import csv
+import aiohttp
 
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
